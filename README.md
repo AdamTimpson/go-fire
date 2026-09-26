@@ -14,7 +14,7 @@ The simulation runs on a 640x480 grid of cells, each one of four states:
 Each frame, two update passes run:
 
 - **Fire spread** — a burning cell has a 30% chance to ignite each neighbouring tree
-- **Burn out** — a burning cell has a 70% chance to become burned out per neighbour check
+- **Burn out** — a burning cell has a 70% chance to become burned out each frame
 - **Regrowth** — burned out cells have a 10% chance to regrow as a tree each frame
 
 ## Dependencies

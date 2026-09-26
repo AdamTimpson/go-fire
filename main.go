@@ -111,16 +111,16 @@ func UpdateFire() {
 
 	for x := range columns {
 		for y := range rows {
-			for _, nCell := range cells[x][y].GetNeighbours() {
-				if nCell.content == Fire {
-					if FireShouldSpread() {
+			if cells[x][y].content == Tree {
+				for _, nCell := range cells[x][y].GetNeighbours() {
+					if nCell.content == Fire && FireShouldSpread() {
 						newCells[x][y].content = Fire
-					}
-
-					if FireShouldBurnOut() {
-						newCells[x][y].content = BurnedOut
+						break
 					}
 				}
+			}
+			if cells[x][y].content == Fire && FireShouldBurnOut() {
+				newCells[x][y].content = BurnedOut
 			}
 		}
 	}
