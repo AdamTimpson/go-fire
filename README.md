@@ -25,5 +25,5 @@ Each frame, two update passes run:
 go run .
 ```
 
->[!aside] AI generated readme
+>[!NOTE] AI generated readme
 > This README was generated using AI
